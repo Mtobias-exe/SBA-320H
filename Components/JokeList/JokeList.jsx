@@ -37,7 +37,7 @@ function JokeList() {
    const handleStop = () =>{
     setStop(true)
     setShowJoke(false)
-    setText("Alright bud, that's it for now")
+    setText("Alright bud, gonna head out and get milk")
     setImage('../public/sad-dad-removebg-preview.png')
    }
 
