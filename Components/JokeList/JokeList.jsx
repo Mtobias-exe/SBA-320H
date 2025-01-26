@@ -6,7 +6,7 @@ function JokeList() {
   const [error, setError] = useState(null)
   const URL = 'https://icanhazdadjoke.com/'
   
-  useEffect(() => {
+  
     const fetchJoke = async () => {
       try{
         const response = await axios.get(URL, { headers: { Accept: "application/json" } });
@@ -15,8 +15,12 @@ function JokeList() {
           setError(err.message);
         }
     }
-    fetchJoke();
-  }, [])
+    
+    useEffect(()=>{
+      fetchJoke();
+    }, []);
+    
+
 
   if (error) console.log(`Error: ${error}`)
 
@@ -27,7 +31,7 @@ function JokeList() {
         <h2>Wanna hear a joke from your old man?</h2>
         
         {/* Joke here  */}
-        <p>{joke.value}</p>
+        <p>{joke.joke}</p>
         <button className='btn' onClick={fetchJoke}>Get New Joke</button>
     
     </div>
