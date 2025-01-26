@@ -8,6 +8,7 @@ function JokeList() {
   const [initialLoad, setInitialLoad] = useState(true);
   const [showJoke, setShowJoke] = useState(false);
   const [image, setImage] = useState('../public/neutral-face-removebg-preview.png')
+  const [stop, setStop] = useState(false)
   const URL = 'https://icanhazdadjoke.com/'
 
     const fetchJoke = async () => {
@@ -23,6 +24,7 @@ function JokeList() {
         } catch (err){
           setError(err.message);
         }
+       
     }
     // wanna hear a joke from your old man? (img is neutral)
     // Would you like to hear another joke (img src is neutral )
@@ -30,6 +32,13 @@ function JokeList() {
 
    const handleClick = () => {
     fetchJoke()
+   }
+
+   const handleStop = () =>{
+    setStop(true)
+    setShowJoke(false)
+    setText("Alright bud, that's it for now")
+    setImage('../public/sad-dad-removebg-preview.png')
    }
 
     useEffect(()=>{
@@ -46,6 +55,7 @@ function JokeList() {
         {/* Joke here  */}
         {showJoke && <p>{joke.joke}</p>}
         <button className='btn' onClick={handleClick}>Get New Joke</button>
+        <button className='btn-no' onClick={handleStop}>No thanks</button>
     
     </div>
 
