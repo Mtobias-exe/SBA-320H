@@ -8,7 +8,7 @@ function JokeList() {
   const [headText, setText] = useState('Want to hear a joke from your old man?');
   const [initialLoad, setInitialLoad] = useState(true);
   const [showJoke, setShowJoke] = useState(false);
-  const [image, setImage] = useState('../public/neutral-face-removebg-preview.png')
+  const [image, setImage] = useState('/neutral-face-removebg-preview.png')
   const [stop, setStop] = useState(false)
   const URL = 'https://icanhazdadjoke.com/'
 
@@ -19,7 +19,7 @@ function JokeList() {
         if (!initialLoad){
           setText('Want to hear another one?')
           setShowJoke(true)
-          setImage('../public/dad-laughing-removebg-preview.png')
+          setImage('/dad-laughing-removebg-preview.png')
         }
         setInitialLoad(false)
         } catch (err){
@@ -39,7 +39,7 @@ function JokeList() {
     setStop(true)
     setShowJoke(false)
     setText("Alright bud, gonna head out and get milk")
-    setImage('../public/sad-dad-removebg-preview.png')
+    setImage('/sad-dad-removebg-preview.png')
    }
 
     useEffect(()=>{
