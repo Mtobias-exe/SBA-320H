@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
+import "./JokeList.css"
 
 function JokeList() {
   const [joke, setJoke] = useState([]);
@@ -48,10 +49,9 @@ function JokeList() {
   if (error) console.log(`Error: ${error}`)
 
   return (
-    <div className='Joke-cont'>
+    <div className='Joke-page'>
         <img src={image} alt="dad reaction"/>
         <h2>{headText}</h2>
-        
         {/* Joke here  */}
         {showJoke && <p>{joke.joke}</p>}
         <button className='btn' onClick={handleClick}>Get New Joke</button>
