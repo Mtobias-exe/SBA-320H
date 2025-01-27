@@ -51,12 +51,13 @@ function JokeList() {
   return (
     <div className='Joke-page'>
         <img src={image} alt="dad reaction"/>
-        <h2>{headText}</h2>
-        {/* Joke here  */}
-        {showJoke && <p>{joke.joke}</p>}
-        <button className='btn' onClick={handleClick}>Get New Joke</button>
-        <button className='btn-no' onClick={handleStop}>No thanks</button>
-    
+        <div className='joke-cont'>
+          <h2 className='Dialogue'>{headText}</h2>
+          {/* Joke here  */}
+          {showJoke && <p className='jokeText'>{joke.joke}</p>}
+          <button className='btn' onClick={handleClick}>Get New Joke</button>
+          <button className='btn-no' onClick={handleStop}>No thanks</button>
+        </div>
     </div>
 
   )
