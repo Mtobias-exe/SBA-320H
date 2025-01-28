@@ -37,13 +37,15 @@ body{
 .joke-cont{
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     height: 380px;
     position: relative;
     align-content: center;
-    left: 0; 
+    /* left: 0; 
     right: 0; 
-    margin-inline: auto; 
+    margin-inline: auto;  */
+    
     
     
     
@@ -68,7 +70,7 @@ button{
 }
 
 .Dialogue{
-    position: absolute;
+    position: static;
     bottom: 75%;
     left: 0; 
     right: 0; 
@@ -78,5 +80,6 @@ button{
 
 .jokeText{
     font-size: 1.7rem;
+    position: static;
     
 }
