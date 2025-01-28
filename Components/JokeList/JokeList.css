@@ -16,7 +16,7 @@
 body{
     align-items: center;
     align-content: center;
-    height: 70vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
 }
@@ -39,7 +39,7 @@ body{
     border-radius: 15px;
     width: 800px;
     height: 380px;
-    position: absolute;
+    position: relative;
     align-content: center;
     left: 0; 
     right: 0; 
